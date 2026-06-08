@@ -1,0 +1,33 @@
+# Python cache/build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Local conda/virtual environments
+.conda_envs/
+.venv/
+venv/
+env/
+
+# Generated maze outputs
+output/
+
+# MuJoCo/generated scene files
+maze_scene.xml
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
