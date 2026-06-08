@@ -3,6 +3,25 @@
 Generate random 2D maze layouts, export them as MuJoCo XML files, preview them
 in a top-down grid, and open selected maps in the native MuJoCo viewer.
 
+## Demo
+
+### Generate Maze XML
+
+![Generate maze XML GUI](img/generate_view.png)
+
+### Preview Generated Maps
+
+`View All` shows generated XML files in one fixed grid preview window.
+
+![Top-down grid preview](img/Viewer_all.png)
+
+### Open a Map in MuJoCo
+
+Click a preview tile or use `View Selected` to open one XML in the native MuJoCo
+viewer.
+
+![Single MuJoCo viewer](img/Viewer_single.png)
+
 ## Quick Start
 
 Install Miniconda or Anaconda first. Then run:
