@@ -24,12 +24,51 @@ viewer.
 
 ## Quick Start
 
-Install Miniconda or Anaconda first. Then run:
+Install Miniconda or Anaconda first. Then clone the repo:
 
 ```bash
 git clone https://github.com/choimagon/random_3D_MAZE.git
 cd random_3D_MAZE
 ```
+
+## Environment Setup With `environment.yml`
+
+Create the conda environment from the included `environment.yml` file.
+
+### macOS / Ubuntu
+
+```bash
+conda env create -p .conda_envs/mujoco-maze -f environment.yml
+conda activate ./.conda_envs/mujoco-maze
+python maze_generator_gui.py
+```
+
+### Windows
+
+```bat
+conda env create -p .conda_envs\mujoco-maze -f environment.yml
+conda activate .conda_envs\mujoco-maze
+python maze_generator_gui.py
+```
+
+If the environment already exists and `environment.yml` changed, update it.
+
+macOS / Ubuntu:
+
+```bash
+conda env update -p .conda_envs/mujoco-maze -f environment.yml --prune
+```
+
+Windows:
+
+```bat
+conda env update -p .conda_envs\mujoco-maze -f environment.yml --prune
+```
+
+## One-Command Launcher
+
+The launcher does the same `environment.yml` setup automatically if the local
+environment does not exist.
 
 ### macOS / Ubuntu
 
@@ -46,19 +85,19 @@ Double-click `run.bat`, or run:
 run.bat
 ```
 
-You can also use the cross-platform Python launcher directly:
+### Cross-Platform
 
 ```bash
 python run.py
 ```
 
-The first run creates this local conda environment automatically:
+All launcher paths create this local conda environment on first run:
 
 ```text
 .conda_envs/mujoco-maze
 ```
 
-After that, the same command opens the GUI directly.
+After setup, the same command opens the GUI directly.
 
 ## OS Setup
 
@@ -107,29 +146,6 @@ If `run.bat` is blocked by policy, run:
 
 ```bat
 python run.py
-```
-
-## Manual Environment Setup
-
-The launcher does this automatically, but you can create the environment
-manually:
-
-```bash
-conda env create -p .conda_envs/mujoco-maze -f environment.yml
-```
-
-Then run the GUI manually:
-
-### macOS / Ubuntu
-
-```bash
-.conda_envs/mujoco-maze/bin/python maze_generator_gui.py
-```
-
-### Windows
-
-```bat
-.conda_envs\mujoco-maze\python.exe maze_generator_gui.py
 ```
 
 ## GUI Workflow
